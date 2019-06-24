@@ -1,9 +1,3 @@
-# Reference Page of SOM clustering exaples
-#  : https://github.com/annoviko/pyclustering/blob/master/pyclustering/nnet/examples/som_examples.py
-#  : https://github.com/annoviko/pyclustering/blob/master/pyclustering/nnet/som.py
-# Reference Image
-#  : https://github.com/annoviko/pyclustering/blob/master/docs/img/target_som_processing.png
-
 import random
 import cv2 as cv
 from bookshelf.function.contours import contours
@@ -46,18 +40,9 @@ for i in range(len(coord)):
 
 print('selected_pixel_bgr :', bgr_val)
 
-# save to csv
-# csvData = rect
-# with open('C:/flashwoman/Object-detection/testfiles_sey/books_coord.csv', 'w') as csvFile:
-#     writer = csv.writer(csvFile)
-#     writer.writerows(csvData)
-# csvFile.close()
-
 
 ## SOM
-# read sample 'Lsun' from file
-# sample = read_sample(FCPS_SAMPLES.SAMPLE_LSUN)
-# [[2.0, 3.0], [0.387577, 0.268546], [0.17678, 0.582963], [3.277701, 0.814082], [0.387577, 0.17678], ...]
+
 sample = bgr_val
 
 # create SOM parameters
@@ -66,10 +51,10 @@ parameters = som_parameters()
 # create self-organized feature map with size 7x7
 rows = 6  # five rows
 cols = 6  # five columns
-structure = type_conn.grid_four  # each neuron has max. four neighbors.
+structure = type_conn.grid_four
 network = som(rows, cols, structure, parameters)
 
-# train network on 'Lsun' sample during 100 epochs.
+# train network on bgr_val sample
 network.train(sample, 50)
 
 # simulate trained network using randomly modified point from input dataset.
