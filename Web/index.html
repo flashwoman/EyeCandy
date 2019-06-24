@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Eye Candy</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="container" >
+        <header>
+            <ul id="menu-container">
+                <li class="menu logo" onclick="toPage(1)"><span style="color:rgb(217,44,71)">EYE</span> CANDY</li>
+                <li class="menu">People</li>
+                <li class="menu">Gallery</li>
+                <li class="menu">Board</li>
+                <li class="menu">Support</li>
+            </ul>
+        </header>
+        <main>
+            <div id="eye-candy">
+                <div id="page-1" class="page active">
+                    <div id="eye-candy-pic">
+                        <img src='books.png' >
+                    </div>
+                    <div id='eye-candy-content'>
+                        <h2>Beautify Your Book shelf</h2>
+                        
+                        <div>
+                            <button id="main-button" onclick="toPage(2)">시작하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-2"  class="page">
+                    <div id="picture-container">
+                        <div id='image-viewer' style="border:1px solid #eee;">
+                            <div id="image-viewer-text">사진을 업로드 해주세요</div>
+                            <img id="image" style="width:auto;height:100%;">
+                        </div>
+                        
+                    </div>
+                    <input type="file" id="file" style="display:none;">
+                    <div id="page-2-button-container">
+                        <div>
+                            <button id="upload-button" onclick="openFile()">사진 업로드</button>
+                        </div>
+                        <div id="select-container">
+                            <label for="how-many">책장의 수 입력</label>
+                            <select id='how-many'>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="figure-button" style="margin-top:5px;" onclick="toPage(3)">분석하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-3"  class="page">
+                    <div id="figure-container">
+                        <div id='image-viewer' style="border:1px solid #eee;">
+                            <img id="figured-image" style="width:auto;height:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="people">
+
+            </div>
+            <div id="gallery">
+
+            </div>
+            <div id="board">
+
+            </div>
+            <div id="support">
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    min-height: 100%;
+}
+body {
+    min-height: 100%;
+    
+}
+#container{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+}
+header {
+    height:100px;
+    display:flex;
+    justify-content: center;
+    border-bottom:1px solid #e3e3e3;
+}
+#menu-container {
+    width:1000px;
+    display:flex;
+    height:100%;
+    align-items:center;
+    
+    color:white;
+    
+
+}
+.menu{
+    display:flex;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+    padding-left:20px;
+    padding-right:20px;
+    color:rgb(79, 65, 150);
+    font-weight: bold;
+    cursor:pointer;
+}
+.menu.logo{
+    flex:1;
+    justify-content: flex-start;
+    font-size:30px;
+    padding-left:0;
+
+}
+main{
+    width:100%;
+    height:100%;
+    background-color:rgb(236,236,236);
+    display:flex;
+    justify-content:center;
+}
+#eye-candy{
+    width:1000px;
+    height:100%;
+    /* display:flex; */
+    position:relative;
+}
+.page{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    opacity:0;
+    transition: opacity 0.3s;
+}
+.page.active{
+    z-index:10;
+    opacity:1;
+}
+#eye-candy-pic{
+    width:100%;
+    padding-top:50px;
+    text-align:center;
+    padding-bottom:50px;
+}
+#eye-candy-content{
+    display:flex;
+    flex-direction: column;;
+    align-items: center;
+    
+}
+#eye-candy-content h2{
+    font-size:55px;
+    padding-bottom:20px;
+    color:rgba(79, 65, 150);
+    font-weight:bold;
+}
+#main-button,
+#figure-button{
+    width:200px;
+    height:50px;
+    border:0;
+    background-color: rgb(244,60,87);
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    margin-top:20px;
+    cursor:pointer;
+}
+#picture-container{
+    padding-top:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    min-height:500px;
+    
+}
+#image-viewer{
+    height:500px;
+    display:flex;
+    align-items:center;
+}
+#image-viewer #image{
+    height:100%;
+}
+#page-2-button-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    /* justify-content:center; */
+}
+#upload-button{
+    width:200px;
+    height:50px;
+    border:0;
+    background-color: rgb(79, 65, 150);
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    margin-top:20px;
+    cursor:pointer;
+}
+#select-container{
+    padding-top:20px;
+}
+#select-container > *{
+    display:block;
+}
+#select-container select{
+    width:200px;
+    height:30px;
+}
+#figure-container{
+    padding-top:20px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    min-height:500px;
+}
