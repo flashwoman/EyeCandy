@@ -16,7 +16,7 @@ function_list = [
 
 
 # load image
-path = 'C:/Object-detection/EyeCandy/img/bookshelf_04.jpg'
+path = 'C:/flashwoman/EyeCandy/img/source/detect-bookshelf/origin/bookshelf_03.jpg'
 img_color = cv.imread(path)
 display('img_color', img_color)
 img_gray = cv.cvtColor(img_color, cv.COLOR_BGR2GRAY)
@@ -30,13 +30,14 @@ img_write('1_thresh', img_color)
 
 # deal with similar-background colors
 ret, thresh = cv.threshold(img_gray, 127, 255, cv.THRESH_BINARY_INV)
-display('sep_threshold', thresh)
-img_color = preprocessing(img_color)
-img_write('2_thresh', img_color)
+# display('sep_threshold', thresh)
+# img_color = preprocessing(img_color)
+# img_write('2_thresh', img_color)
 
 # do contour
-path = 'C:/Object-detection/EyeCandy/img/img_book_only.png'
+path = 'C:/flashwoman/Object-detection/EyeCandy/img/img_book_only.png'
 img_book_only = cv.imread(path)
+img_book_only = preprocessing(img_book_only)
 img_color = contours(img_book_only, img_color)
 img_write('3_contour', img_color)
 
